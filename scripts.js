@@ -46,10 +46,8 @@ function handleBoxClick(event) {
         box.disabled = true;
 
         const winner = checkWinner();
+        
         if (winner) {
-            gameActive = false;
-            msg.textContent = winner === 'Tie' ? "It's a Tie!" : `${winner} Wins!`;
-            msgContainer.classList.remove('hide');
             if(winner === 'O'){
                 msgContainer.classList.add('winnerbgO');
                 msgContainer.classList.remove('winnerbgX');
@@ -57,7 +55,13 @@ function handleBoxClick(event) {
             else if(winner === 'X'){
                 msgContainer.classList.add('winnerbgX');
                 msgContainer.classList.remove('winnerbgO');
+            }else{
+                msgContainer.classList.remove('winnerbgX');
+                msgContainer.classList.remove('winnerbgO');
             }
+            gameActive = false;
+            msg.textContent = winner === 'Tie' ? "It's a Tie!" : `${winner} Wins!`;
+            msgContainer.classList.remove('hide');
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
