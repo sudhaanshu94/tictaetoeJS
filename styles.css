@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 5vw;
+    color: #cad2c5;
+    background-color: #2f3e46;
+}
+
+body {
+    background-color: #cad2c5;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 70vh;
+    background-color: #cad2c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5vmin;
+    justify-items: center;
+    align-items: center;
+    height: 68vmin;
+    width: 68vmin;
+    background-color: #52796f;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vmin;
+    color: black;
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: red;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: darkred;
+}
+
+.msg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    gap: 2rem;
+}
+
+.winnerbgO {
+    background-color: rgba(253, 197, 0, 0.8);
+}
+
+.winnerbgX {
+    background-color: rgba(0, 80, 157, 0.8);
+}
+
+.hide {
+    display: none;
+}
+
+#msg {
+    font-size: 5vmin;
+}
+
+#new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#new-btn:hover {
+    background-color: darkgreen;
+}
+
+@media (max-width: 292px) {
+    .err {
+        display: none;
+    }
+    #error-message {
+        display: block;
+        color: red;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
